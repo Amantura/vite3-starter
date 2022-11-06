@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply text-lg
+    }
+
+    [type='text'],
+    [type='email'],
+    [type='url'],
+    [type='password'],
+    [type='number'],
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='week'],
+    [multiple],
+    textarea,
+    select {
+        @apply w-full text-lg border-gray-300 rounded-xl focus:border-green-400 focus:ring-green-500
+    }
+
+    [type='checkbox'],
+    [type='radio'] {
+        @apply text-green-500 focus:ring-green-500;
+    }
+
+    button {
+        @apply focus:outline-none active:scale-95 transform duration-75 select-none font-medium
+    }
+
+    [type='checkbox'] {
+        @apply rounded
+    }
+
+}
+
+@layer utilities {
+    .flex-center {
+        @apply flex justify-center items-center
+    }
+}
